@@ -17,3 +17,5 @@ python -m pip install --user virtualenv
 python -m venv ~/env
 source ~/env/bin/activate
 pip install -r /requirements.txt
+
+curl -sL https://raw.githubusercontent.com/dimablack/profiles-rest-api/master/deploy/setup.sh | sudo bash -
