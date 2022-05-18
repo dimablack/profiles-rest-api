@@ -35,6 +35,7 @@ echo "$PROJECT_BASE_PATH"
 cd $PROJECT_BASE_PATH/
 echo "$VIRTUALENV_BASE_PATH/profiles_api/bin/python"
 $VIRTUALENV_BASE_PATH/profiles_api/bin/python app/manage.py migrate
+$VIRTUALENV_BASE_PATH/profiles_api/bin/python app/manage.py collectstatic --noinput
 
 # Setup Supervisor to run our uwsgi process.
 echo '34'
@@ -51,7 +52,8 @@ echo '42'
 # Setup nginx to make our application accessible.
 cp $PROJECT_BASE_PATH/deploy/nginx_profiles_api.conf /etc/nginx/sites-available/profiles_api.conf
 echo '46'
-rm /etc/nginx/sites-enabled/default
+sudo rm /etc/nginx/sites-enabled/default -f
+sudo rm /etc/nginx/sites-enabled/profiles_api.conf -f
 echo '48'
 ln -s /etc/nginx/sites-available/profiles_api.conf /etc/nginx/sites-enabled/profiles_api.conf
 echo '50'
