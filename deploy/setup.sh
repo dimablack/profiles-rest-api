@@ -28,6 +28,7 @@ python3 -m venv $VIRTUALENV_BASE_PATH/profiles_api
 
 #$VIRTUALENV_BASE_PATH/profiles_api/bin/pip install Django==4.0.4
 $VIRTUALENV_BASE_PATH/profiles_api/bin/pip install -r $PROJECT_BASE_PATH/requirements.txt
+$VIRTUALENV_BASE_PATH/profiles_api/bin/pip install uwsgi==2.0.18
 
 # Run migrations
 echo "$PROJECT_BASE_PATH"
@@ -37,6 +38,7 @@ $VIRTUALENV_BASE_PATH/profiles_api/bin/python app/manage.py migrate
 
 # Setup Supervisor to run our uwsgi process.
 echo '34'
+echo "$PROJECT_BASE_PATH/deploy/supervisor_profiles_api.conf"
 cp $PROJECT_BASE_PATH/deploy/supervisor_profiles_api.conf /etc/supervisor/conf.d/profiles_api.conf
 echo '36'
 supervisorctl reread
