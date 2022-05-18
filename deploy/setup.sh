@@ -16,7 +16,6 @@ locale-gen en_GB.UTF-8
 # Install Python, SQLite and pip
 echo "Installing dependencies..."
 sudo apt-get purge -y python3-dev python3-venv sqlite python-pip
-apt-get upgrade
 apt-get update
 apt-get install -y python3-dev python3-venv sqlite python-pip supervisor nginx git
 
