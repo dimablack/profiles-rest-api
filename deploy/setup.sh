@@ -37,7 +37,7 @@ $VIRTUALENV_BASE_PATH/profiles_api/bin/python app/manage.py migrate
 
 # Setup Supervisor to run our uwsgi process.
 echo '34'
-cp $PROJECT_BASE_PATH/profiles-api/deploy/supervisor_profiles_api.conf /etc/supervisor/conf.d/profiles_api.conf
+cp $PROJECT_BASE_PATH/deploy/supervisor_profiles_api.conf /etc/supervisor/conf.d/profiles_api.conf
 echo '36'
 supervisorctl reread
 echo '38'
