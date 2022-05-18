@@ -8,6 +8,8 @@ PROJECT_GIT_URL='https://github.com/dimablack/profiles-rest-api.git'
 PROJECT_BASE_PATH='/usr/local/apps/profiles-rest-api'
 VIRTUALENV_BASE_PATH='/usr/local/virtualenvs'
 
+sudo rm -rf $PROJECT_BASE_PATH
+
 # Set Ubuntu Language
 locale-gen en_GB.UTF-8
 
