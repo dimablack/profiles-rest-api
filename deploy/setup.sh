@@ -25,6 +25,8 @@ git clone $PROJECT_GIT_URL $PROJECT_BASE_PATH
 
 mkdir -p $VIRTUALENV_BASE_PATH
 python3 -m venv $VIRTUALENV_BASE_PATH/profiles_api
+mkdir -p $VIRTUALENV_BASE_PATH/static
+mkdir -p $VIRTUALENV_BASE_PATH/app/static
 
 #$VIRTUALENV_BASE_PATH/profiles_api/bin/pip install Django==4.0.4
 $VIRTUALENV_BASE_PATH/profiles_api/bin/pip install -r $PROJECT_BASE_PATH/requirements.txt
