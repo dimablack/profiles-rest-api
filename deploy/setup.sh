@@ -27,11 +27,11 @@ mkdir -p $VIRTUALENV_BASE_PATH
 python3 -m venv $VIRTUALENV_BASE_PATH/profiles_api
 
 $VIRTUALENV_BASE_PATH/profiles_api/bin/pip install django
-$VIRTUALENV_BASE_PATH/profiles_api/bin/pip install -r $PROJECT_BASE_PATH/profiles-api/requirements.txt
+$VIRTUALENV_BASE_PATH/profiles_api/bin/pip install -r $PROJECT_BASE_PATH/requirements.txt
 
 # Run migrations
-echo "$PROJECT_BASE_PATH/profiles-api/"
-cd $PROJECT_BASE_PATH/profiles-api/
+echo "$PROJECT_BASE_PATH"
+cd $PROJECT_BASE_PATH/
 echo "$VIRTUALENV_BASE_PATH/profiles_api/bin/python"
 $VIRTUALENV_BASE_PATH/profiles_api/bin/python app/manage.py migrate
 
