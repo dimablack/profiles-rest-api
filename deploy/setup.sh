@@ -49,7 +49,7 @@ supervisorctl restart profiles_api
 echo '42'
 
 # Setup nginx to make our application accessible.
-cp $PROJECT_BASE_PATH/profiles-api/deploy/nginx_profiles_api.conf /etc/nginx/sites-available/profiles_api.conf
+cp $PROJECT_BASE_PATH/deploy/nginx_profiles_api.conf /etc/nginx/sites-available/profiles_api.conf
 echo '46'
 rm /etc/nginx/sites-enabled/default
 echo '48'
